@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>치와와독</title>
+	<style>
+		#dog{width: 500px; position: absolute; left: 450px; top: 100px;}
+		h1{text-align: center;}
+		
+		.listBox{background: white;
+			margin-right: 20px;
+			position: fixed;
+			}
+
+		.list {list-style-type:none;
+				margin: 10px;
+				font-family: Helvetica;
+				font-size: 15px;
+				font-weight: 700;
+				line-height: 22px;
+				}
+
+		a:visited {
+		    color: black;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		a:link {
+		    color: black;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		a:hover {color: blue;}
+
+		.dropdown:hover .dropdown-content {
+		    display: block;
+		}
+
+		.dropdown-content a:hover {color: blue;}
+		
+		.dropdown-content a {
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		}
+
+		a:active {
+		    color: white;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		#container {font-size: 110px;
+					font-family: 'Black Han Sans', sans-serif;
+					line-height: 120px;
+					}
+
+		@keyframes rotate{
+			from{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+
+		.footer {
+		   height: 70px; 
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+
+		   text-align: right;
+		}
+
+		.dropbtn {
+			list-style-type:none;
+			font-family: Helvetica;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 22px;
+		    border: none;
+		    cursor: pointer;
+		    padding: 0px;
+		}
+
+		.dropdown {
+		    position: relative;
+		    display: inline-block;
+		}
+
+		.dropdown-content {
+		    display: none;
+		    position: relative;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		    margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>		
+	<div class="list">
+			  <li><a href="https://kim50.github.io/kim50_home/">HOME</a></li>
+			  <li><a href="#home">ABOUT ME</a></li>
+			
+			   <div class="dropdown">
+				    <button class="dropbtn"><a href="https://kim50.github.io/kim50_home/">CODING</a> 
+				      <i class="fa fa-caret-down"></i>
+				    </button>
+				    <div class="dropdown-content">
+				      <a href="https://kim50.github.io/line-dancing/">#1. Line Dancing</a>
+				      <a href="https://kim50.github.io/chihuahua-dog/">#2. ANGRY Chihuahua</a>
+				      <a href="#">Link 3</a>
+				    </div>
+				  </div> 
+
+			  <li><a href="#home">POSTER</a></li>
+			</div>  
+		</div>
+	<img src="dog1.png" id="dog">
+	<audio id="soundMusic">
+	  <source src="sound.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+
+		var toggle = "off";
+
+		dog.onclick = function(){
+			if(toggle == "off"){
+				dog.setAttribute("src","dog2.png");
+				dog.style.width= "500px";
+				document.body.style.backgroundColor = "red";
+				toggle = "on";
+				soundMusic.play()	
+			}else {
+				dog.setAttribute("src","dog1.png");
+				dog.style.width= "500px";
+				document.body.style.backgroundColor = "white";
+				toggle = "off";
+				soundMusic.pause()	
+			}	
+		}
+	</script>
+
+</body>
+</html>
